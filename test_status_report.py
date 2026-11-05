@@ -6,7 +6,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parent
 TOOL = ROOT / "status_report.py"
 
 SUMMARY = ["Project", "Client", "Client contact", "Status (RAG)", "Next milestone", "Milestone date",
