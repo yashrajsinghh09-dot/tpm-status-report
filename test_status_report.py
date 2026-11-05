@@ -1,4 +1,4 @@
-"""Run with:  python -m unittest discover tests"""
+"""Run with:  python -m unittest"""
 import csv
 import subprocess
 import sys
