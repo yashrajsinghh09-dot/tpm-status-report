@@ -23,8 +23,10 @@ Needs Python 3.9+.
 
 ```bash
 pip install -r requirements.txt
-python status_report.py sample/T5_Project_Tracker.xlsx --date 2026-11-16
+python status_report.py T5_Project_Tracker.xlsx --date 2026-11-16
 ```
+
+(On Mac, use `python3` and `pip3`.)
 
 Output:
 
@@ -41,12 +43,14 @@ TPM check (13 items) -> reports/TPM_check_2026-11-16.md
 Other options:
 
 ```bash
-python status_report.py sample/csv --date 2026-11-16      # CSV input instead of Excel
+python status_report.py . --date 2026-11-16              # CSV input: folder with summary.csv + risks.csv
 python status_report.py my_tracker.xlsx --out friday       # date defaults to today
-python -m unittest discover tests                          # 5 tests
+python -m unittest                                         # 5 tests
 ```
 
-Open the `.html` file in a browser, select all, copy, paste into an email. Sample outputs are already in `reports/`.
+Reports are written to a `reports/` folder. Open the `.html` file in a browser, select all, copy, paste into an email.
+
+Repo contents: the tool (`status_report.py`), the sample tracker (`T5_Project_Tracker.xlsx`, and the same data as `summary.csv` + `risks.csv`), tests (`test_status_report.py`), and sample output from the run above (`Kavach_...`, `Ledger_...`, `TPM_check_...`).
 
 ## Tracker columns
 
